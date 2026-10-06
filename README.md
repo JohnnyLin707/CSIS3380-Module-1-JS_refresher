@@ -2,6 +2,8 @@ English | [简体中文](README.zh-CN.md)
 
 # JS Refresher: Mastery Challenge
 
+🔗 **Live site:** https://johnnylin707.github.io/JS_refresher/
+
 An interactive quiz app for reviewing modern JavaScript fundamentals. Built as a classroom review exercise (CSIS 3380 – Full Stack Development with JavaScript), it works as a self-study drill as well.
 
 All questions, answers, and explanations are shown in **English with a Chinese translation** side by side, so learners can study in both languages at once.
