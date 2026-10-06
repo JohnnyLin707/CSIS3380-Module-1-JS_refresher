@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Refresher: Teacher Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JS Refresher: Mastery Challenge</h1>
+        <div class="score-container">
+            <div id="score-board">Total Score: 0</div>
+            <div class="rules">Rule: +1 for Correct | -1 for Incorrect</div>
+        </div>
+    </header>
+
+    <main id="app-container">
+        <nav class="sidebar">
+            <button onclick="startTopic('statements')">Statements vs Expressions</button>
+            <button onclick="startTopic('immutability')">Immutability</button>
+            <button onclick="startTopic('functions')">Arrow Functions & Callbacks</button>
+            <button onclick="startTopic('data')">Spread & Destructuring</button>
+            <button onclick="startTopic('arrays')">Array Methods</button>
+        </nav>
+
+        <section class="content-display">
+            <div id="theory-card" class="card">
+                <h2 id="topic-title">Select a Topic</h2>
+                <p id="topic-theory">Choose a category to begin your review.</p>
+            </div>
+
+            <div id="exercise-card" class="card hidden">
+                <div class="stats">Question: <span id="q-count">0</span>/5</div>
+                <h3 id="exercise-text"></h3>
+                <p id="exercise-text-cn" class="cn-text"></p>
+                <input type="text" id="user-input" placeholder="Your answer...">
+                <div class="controls">
+                    <button id="check-btn">Submit Answer</button>
+                    <button id="next-btn" class="hidden">Next Question</button>
+                </div>
+                <p id="feedback"></p>
+                <div id="explanation-box" class="hidden">
+                    <hr>
+                    <strong>The Right Answer:</strong> <span id="correct-ans-display"></span><span id="correct-ans-cn" class="cn-text"></span><br>
+                    <p id="explanation-text"></p>
+                    <p id="explanation-text-cn" class="cn-text"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

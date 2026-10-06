@@ -1,0 +1,52 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #e67e22;
+    --bg: #f4f7f6;
+    --white: #ffffff;
+    --error: #e74c3c;
+    --success: #27ae60;
+}
+
+body { font-family: sans-serif; background: var(--bg); margin: 0; display: flex; flex-direction: column; height: 100vh; }
+header { background: var(--primary); color: white; text-align: center; padding: 1rem; border-bottom: 4px solid var(--accent); }
+
+.score-container { margin-top: 10px; display: flex; flex-direction: column; align-items: center; }
+#score-board { font-size: 1.5rem; font-weight: bold; color: var(--accent); }
+.rules { font-size: 0.8rem; opacity: 0.8; margin-top: 5px; }
+
+#app-container { display: grid; grid-template-columns: 260px 1fr; flex: 1; }
+.sidebar { background: #34495e; padding: 1rem; display: flex; flex-direction: column; gap: 10px; }
+.sidebar button { padding: 12px; background: #ffffff11; color: white; border: 1px solid #555; cursor: pointer; border-radius: 4px; transition: 0.3s; }
+.sidebar button:hover { background: var(--accent); }
+
+.content-display { padding: 2rem; display: flex; flex-direction: column; gap: 20px; }
+.card { background: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.hidden { display: none; }
+.stats { font-size: 0.8rem; color: #777; margin-bottom: 10px; }
+
+input { padding: 10px; width: 60%; margin-right: 10px; border: 1px solid #ddd; }
+#check-btn, #next-btn { padding: 10px 20px; border: none; cursor: pointer; color: white; border-radius: 4px; }
+#check-btn { background: var(--primary); }
+#next-btn { background: var(--accent); }
+#feedback { margin-top: 15px; font-weight: bold; }
+
+/* ... (Previous CSS remains same) ... */
+
+#explanation-box {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fcfcfc;
+    border-left: 5px solid var(--accent);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #444;
+}
+
+hr { border: 0; border-top: 1px solid #eee; margin: 10px 0; }
+
+.hidden { display: none !important; }
+
+/* Chinese translation lines shown alongside the English originals */
+.cn-text { color: #7f8c8d; }
+#exercise-text-cn { font-weight: normal; font-size: 1.05rem; margin: 6px 0 0; }
+#explanation-text-cn { margin: 4px 0 0; }
