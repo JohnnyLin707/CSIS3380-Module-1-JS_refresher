@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Practice: Arrow Functions &amp; Callbacks</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header>
+        <h1>Extra Practice: Arrow Functions &amp; Callbacks</h1>
+        <div class="score-container">
+            <div id="score-board">Total Score: 0</div>
+            <div class="rules">Rule: +1 for Correct | -1 for Incorrect</div>
+        </div>
+    </header>
+
+    <main id="app-container">
+        <nav class="sidebar">
+            <a class="sidebar-link back-link" href="../../index.html">← Back to Main Menu</a>
+
+            <div class="sidebar-section">Extra Practice</div>
+            <a class="sidebar-link" href="../statements/index.html">Statements vs Expressions</a>
+            <a class="sidebar-link" href="../immutability/index.html">Immutability</a>
+            <a class="sidebar-link" href="../functions/index.html">Arrow Functions & Callbacks</a>
+            <a class="sidebar-link" href="../data/index.html">Spread & Destructuring</a>
+            <a class="sidebar-link" href="../arrays/index.html">Array Methods</a>
+        </nav>
+
+        <section class="content-display">
+            <div id="theory-card" class="card">
+                <h2 id="topic-title">Extra Practice</h2>
+                <p id="topic-theory"></p>
+                <p id="topic-theory-cn" class="cn-text"></p>
+            </div>
+
+            <div id="exercise-card" class="card hidden">
+                <div class="stats">Question: <span id="q-count">0</span>/<span id="q-total">0</span></div>
+                <h3 id="exercise-text"></h3>
+                <p id="exercise-text-cn" class="cn-text"></p>
+                <input type="text" id="user-input" placeholder="Your answer...">
+                <div class="controls">
+                    <button id="check-btn">Submit Answer</button>
+                    <button id="next-btn" class="hidden">Next Question</button>
+                    <button id="restart-btn" class="hidden">Restart Round</button>
+                </div>
+                <p id="feedback"></p>
+                <div id="explanation-box" class="hidden">
+                    <hr>
+                    <strong>The Right Answer:</strong> <span id="correct-ans-display"></span><span id="correct-ans-cn" class="cn-text"></span><br>
+                    <p id="explanation-text"></p>
+                    <p id="explanation-text-cn" class="cn-text"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../quiz-engine.js"></script>
+    <script src="questions.js"></script>
+    <script>
+        QuizEngine.start({
+            title: "Arrow Functions & Callbacks — Extra Practice",
+            theory: "More drill on arrow syntax shortcuts, higher-order functions and how callbacks are executed later.",
+            theoryCn: "更多的练习：箭头函数的简写形式、高阶函数，以及回调如何稍后被执行。",
+            questions: extraQuestions
+        });
+    </script>
+</body>
+</html>

@@ -10,8 +10,9 @@ All questions, answers, and explanations are shown in **English with a Chinese t
 
 ## Features
 
-- **5 topics** — Statements vs Expressions, Immutability, Arrow Functions & Callbacks, Spread & Destructuring, Array Methods
+- **5 topics** — Statements vs Expressions, Immutability, Arrow Functions &amp; Callbacks, Spread &amp; Destructuring, Array Methods
 - **5 questions per topic** (25 total), shuffled each round
+- **Extra practice** — 8 additional questions per topic (40 extra) in their own pages, opened from the sidebar
 - **Scoring rule** — +1 for a correct answer, −1 for an incorrect one, with a running total score
 - **Theory card** — each topic opens with a one-line summary of the key concept
 - **Bilingual display** — every question, answer, and explanation appears in English with its Chinese translation underneath
@@ -47,18 +48,29 @@ Then visit <http://localhost:8080>.
 
 > Tip: answers are checked with a case-insensitive "contains" match, so typing `Statement` for `statement` counts as correct.
 
+## Extra Practice
+
+The **Extra Practice** section in the sidebar links to a dedicated page per topic, each with **8 more questions** (40 extra questions total). They use the same layout, the same scoring rule and the same bilingual English + Chinese display as the main page, and each round ends with a **Restart Round** button that reshuffles the questions.
+
 ## Project Structure
 
 ```
 JS_refresher/
-├── index.html   # Page layout: sidebar, theory card, exercise card
-├── script.js    # Question bank (bilingual data) + quiz logic
+├── index.html   # Page layout: sidebar (core topics + extra practice links), theory card, exercise card
+├── script.js    # Question bank (bilingual data) + quiz logic for the main page
 ├── style.css    # Styling, including the Chinese translation lines
+├── extras/                      # Extra practice pages (one folder per topic)
+│   ├── quiz-engine.js           # Shared quiz logic used by every extra page
+│   ├── statements/              # index.html + questions.js
+│   ├── immutability/
+│   ├── functions/
+│   ├── data/
+│   └── arrays/
 ├── README.md        # This file (English)
 └── README.zh-CN.md  # Chinese version of the README
 ```
 
-The question bank lives at the top of `script.js` in the `topicBank` object. Each question has:
+The main question bank lives at the top of `script.js` in the `topicBank` object. Each extra topic keeps its own bank in `extras/<topic>/questions.js`. Every question has:
 
 | Field | Content |
 | --- | --- |
@@ -66,7 +78,8 @@ The question bank lives at the top of `script.js` in the `topicBank` object. Eac
 | `a` / `acn` | Accepted answer in English / Chinese |
 | `e` / `ecn` | Explanation in English / Chinese |
 
-To add questions or topics, edit `topicBank` — no other code changes are needed.
+To add questions to the main page, edit `topicBank` — no other code changes are needed.
+To add extra-practice questions, edit the `extraQuestions` array in the matching `extras/<topic>/questions.js`.
 
 ## Tech Stack
 
